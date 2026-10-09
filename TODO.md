@@ -23,3 +23,11 @@ The supplied scripts do not implement automatic needs decay, sickness, or saved 
 - [x] Publish the portrait Windows build and updated source.
 - [x] Stop further tests at John's request; publish v1.1.0 for bug reports and later updates.
 - [x] Remove the shared Windows build profile after the missing WindowsPlatformSettings warning; keep local build profiles ignored.
+
+## Calm care update
+
+- [x] Halve care animation speed and make the cut pup frames opaque.
+- [x] Add background music and eight action music cues.
+- [x] Crossfade scenery and set appropriate action status presets.
+- [x] Check asset wiring, supplied script hashes, and Unity Play mode.
+- [x] Push updated Unity source and separate artwork.
