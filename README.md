@@ -29,6 +29,8 @@ The bars show fixed action feedback. Automatic needs decay, sickness, death, and
 
 Add this repository root in Unity Hub with Unity 6000.5.10f1. Open Assets/Scenes/SampleScene.unity and choose a 9:16 aspect ratio in the Game view before pressing Play. The standalone window defaults to 405 by 720; the Canvas reference is 720 by 1280.
 
+Build profiles are local to each computer and are not shared. The scene remains in the global build scene list. A Windows-only profile was removed because editors without its WindowsPlatformSettings type reported a missing-type warning.
+
 Unity 6000.2.2f1 installation failed on the authorized retry because Windows administrator approval was unavailable. This project uses the authorized 6000.5.10f1 fallback. Older-editor compatibility and Mac builds are untested.
 
 Artwork is available separately in [PocketPet-sprites](https://github.com/Zeref538/PocketPet-sprites). The new frame PNGs total 2,990,319 bytes, so artwork can be downloaded without Unity project files.

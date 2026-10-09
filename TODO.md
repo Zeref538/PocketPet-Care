@@ -22,3 +22,4 @@ The supplied scripts do not implement automatic needs decay, sickness, or saved 
 - [x] Test all eight buttons, repeated clicks, script hashes, and fresh ZIP extraction.
 - [x] Publish the portrait Windows build and updated source.
 - [x] Stop further tests at John's request; publish v1.1.0 for bug reports and later updates.
+- [x] Remove the shared Windows build profile after the missing WindowsPlatformSettings warning; keep local build profiles ignored.

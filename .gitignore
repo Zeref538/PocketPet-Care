@@ -10,3 +10,5 @@ obj/
 *.slnx
 Assets/Resources/PerformanceTestRunInfo.json*
 Assets/Resources/PerformanceTestRunSettings.json*
+Assets/Settings/Build Profiles/
+Assets/Settings/Build Profiles.meta
