@@ -2,14 +2,11 @@
 
 - [x] Create a separate project and private GitHub repository.
 - [x] Copy supplied runtime scripts unchanged; exclude editor builder scripts.
-- [ ] Connect all pet animations to action buttons.
-- [ ] Add four status bars with button feedback using built-in components.
-- [ ] Connect and test action sounds.
-- [ ] Test in Unity, check script hashes, and push the finished project.
-
-## In Progress
-
-Unity scene and interface setup.
+- [x] Connect all pet animations to action buttons.
+- [x] Add four status bars with button feedback using built-in components.
+- [x] Connect action sounds and verify clips, named calls, and runtime errors.
+- [x] Test in Unity and the Windows executable; check script hashes.
+- [ ] Push the verified project to GitHub.
 
 ## Limits
 
