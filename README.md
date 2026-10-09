@@ -4,6 +4,8 @@ Unity virtual-pet care demo using PocketPet's supplied pup artwork and three unc
 
 ![PocketPet Care running on Windows](docs/img/home-1280.png)
 
+Download the [Windows game](https://github.com/Zeref538/PocketPet-Care/releases/tag/v1.0.0), extract the whole ZIP, and open PocketPet Care.exe. Unity is only needed to edit the project. This download does not run on a phone or Mac.
+
 Open this repository root in Unity Hub using Unity 6000.5.10f1, then open Assets/Scenes/SampleScene.unity. The source PocketPet project remains separate.
 
 Press Play in Unity. Feed, Love, Play, Study, Sleep, Wash, Sad, and Cry trigger the pet's existing animations. Four bars show hunger, happiness, energy, and cleanliness. Each button also calls a named sound through the supplied AudioManager.

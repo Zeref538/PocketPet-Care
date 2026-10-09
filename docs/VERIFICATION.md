@@ -28,6 +28,8 @@ The final build succeeded in 8.275 seconds. All eight buttons were also pressed 
 
 The final player log contained no exceptions. On exit Unity reported a ComputeBuffer disposal message from the rendering stack. Keyboard navigation and physical speaker output remain unverified.
 
+The Windows release ZIP is 44,974,695 bytes. Its 199 entries include the executable, its data folder, Mono runtime, and UnityPlayer.dll. GitHub accepted the release upload. The executable was tested before packaging; a fresh extraction has not been retested.
+
 Unity emitted one package warning during building: no RuntimePipelineConfig asset was found, so the optional Runtime Pipeline is disabled in player builds. The care scene still rendered and ran. This is recorded rather than hidden.
 
 Unity 6000.2.2f1 installation failed on the authorized retry because administrator elevation was unavailable. The authorized 6000.5.10f1 fallback was used. Older-editor compatibility and Mac builds remain untested.

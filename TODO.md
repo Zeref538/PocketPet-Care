@@ -6,7 +6,8 @@
 - [x] Add four status bars with button feedback using built-in components.
 - [x] Connect action sounds and verify clips, named calls, and runtime errors.
 - [x] Test in Unity and the Windows executable; check script hashes.
-- [ ] Push the verified project to GitHub.
+- [x] Push the verified project to GitHub.
+- [x] Publish the tested Windows build as a separate release download.
 
 ## Limits
 
