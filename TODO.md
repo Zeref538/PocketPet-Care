@@ -20,8 +20,5 @@ The supplied scripts do not implement automatic needs decay, sickness, or saved 
 - [x] Add speech bubbles and matching study, sleep, wash, and drink props.
 - [x] Switch scenery using built-in animation components.
 - [x] Test all eight buttons, repeated clicks, script hashes, and fresh ZIP extraction.
-- [ ] Publish the portrait Windows build and updated source.
-
-## In Progress
-
-Publishing the verified portrait build and separate artwork download.
+- [x] Publish the portrait Windows build and updated source.
+- [x] Stop further tests at John's request; publish v1.1.0 for bug reports and later updates.
