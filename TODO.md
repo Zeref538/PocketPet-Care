@@ -12,3 +12,16 @@
 ## Limits
 
 The supplied scripts do not implement automatic needs decay, sickness, or saved progress. Mac lab testing is pending.
+
+## Portrait care update
+
+- [x] Add eight matching buttons with distinct colors and action pups.
+- [x] Add 12-frame loops for care actions and idle.
+- [x] Add speech bubbles and matching study, sleep, wash, and drink props.
+- [x] Switch scenery using built-in animation components.
+- [x] Test all eight buttons, repeated clicks, script hashes, and fresh ZIP extraction.
+- [ ] Publish the portrait Windows build and updated source.
+
+## In Progress
+
+Publishing the verified portrait build and separate artwork download.

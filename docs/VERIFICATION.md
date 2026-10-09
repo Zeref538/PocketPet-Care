@@ -1,18 +1,24 @@
 # Verification
 
-Checked on Windows with Unity 6000.5.10f1 on 9 October 2026. These checks cover one computer, not the Mac lab or a phone build.
+Checked on one Windows computer with Unity 6000.5.10f1 on 9 October 2026. Phone-shaped layout does not establish Android or iOS compatibility.
 
-## Gameplay
+## Final portrait build
 
-All eight buttons were pressed in Unity Play mode. Feed showed eating and filled hunger; Play showed the ball animation; Study showed the book animation; Sleep showed sleeping and filled energy. Sad and Cry showed their respective expressions and lowered happiness. Love and Wash invoked happy and updated happiness and cleanliness respectively.
+The final Windows build succeeded in 8.798 seconds. Its 405-by-720 client area has all eight labels and four status labels visible. All eight buttons were pressed in the final executable. Feed, Love, Play, Study, Sleep, Wash, and Drink showed their corresponding animation and documented bar feedback. Scene switched bedroom to garden and back while preserving bar values.
 
-Four bars rendered correctly. Each changed to its documented fixed value. The pet returned to idle after the action interval. The Console showed zero errors and zero warnings after the eight-action Play-mode check.
+Study initially had its book hidden by the table. The table was lowered and shortened, then the open book was observed above its surface. The longest speech text initially ran past the bubble. The bubble was widened and all eight messages were observed fitting inside it in the final build.
 
-The scene contains eight PetButtons calls, eight AudioManager calls, and eight Image.fillAmount calls. All buttons use their configured sound name. The three WAV files contain nonzero PCM samples: food peak 14200, love peak 14627, and play peak 17564 on the 16-bit scale. Button tests produced no missing-sound exceptions. This verifies the assets and playback wiring; speaker output has not been independently recorded or heard.
+Feed has a bone and food bowl; Study has a table and book; Sleep has a bed; Wash has a tub and bubbles; Drink has a water bowl. Speech and transient props disappeared after the action interval. The Scene speech was explicitly checked after a four-second wait and was hidden, with the pet idle.
 
-## Supplied scripts
+Actual build screenshots are under docs/img/portrait-*.png. They are captures, not design mockups. Each client image is 405 by 720.
 
-Exactly three C# files exist under Assets. Each SHA-256 matches the supplied file in the source PocketPet project. No helper or editor scripts were added.
+The Windows ZIP contains 199 entries and is 45,114,270 bytes. Its archive integrity check passed. A fresh extraction launched successfully, with its executable matching the built file. Three rapid clicks on Wash showed washing, the correct speech bubble, and full cleanliness without an error. Returning to idle was checked afterward.
+
+## Frames and scripts
+
+There are 96 new transparent frames: eight states with twelve distinct 192-by-192 PNGs each. Every imported frame is checked against the matching separate sprites-repo file. Clips are configured at 12 frames per second. Original source frames are preserved.
+
+Exactly three C# files exist under Assets and each SHA-256 matches PocketPet/Game/Assets/Scripts. No helper or editor scripts were added.
 
 | Script | SHA-256 |
 | --- | --- |
@@ -20,18 +26,10 @@ Exactly three C# files exist under Assets. Each SHA-256 matches the supplied fil
 | PetButtons.cs | 859C44EF202D52B5941D7D64F5F8DA0BB7A57472754D9BF7BA4BBDBA320DC566 |
 | Sound.cs | 0B3656EB5F98ABF6BC1E336600B723DCD37A138847C08FC114B099DD8A133A7D |
 
-## Build and limits
+All eight buttons call configured sound names. The three WAV files contain nonzero PCM samples: food peak 14200, love peak 14627, play peak 17564 on the 16-bit scale. The final player log contained no exceptions or errors. Speaker output has not been independently recorded or heard.
 
-Windows builds succeeded and the executable launched. The original 1920-by-1080 window clipped labels on this screen. The final configuration uses a 1280-by-720 window and disables the native-resolution override.
+## Limits
 
-The final build succeeded in 8.275 seconds. All eight buttons were also pressed in the final Windows executable, with their animations and bar changes observed. All eight labels were visible. The preview is an actual 1280-by-720 capture after these interactions, with the pet back at idle.
+The original optional Runtime Pipeline package remains disabled because no RuntimePipelineConfig was supplied. Unity reports a ComputeBuffer disposal message on player exit. The rendered game and interactions were checked despite these package diagnostics.
 
-The final player log contained no exceptions. On exit Unity reported a ComputeBuffer disposal message from the rendering stack. Keyboard navigation and physical speaker output remain unverified.
-
-The Windows release ZIP is 44,974,695 bytes. Its 199 entries include the executable, its data folder, Mono runtime, and UnityPlayer.dll. GitHub accepted the release upload. The executable was tested before packaging; a fresh extraction has not been retested.
-
-Unity emitted one package warning during building: no RuntimePipelineConfig asset was found, so the optional Runtime Pipeline is disabled in player builds. The care scene still rendered and ran. This is recorded rather than hidden.
-
-Unity 6000.2.2f1 installation failed on the authorized retry because administrator elevation was unavailable. The authorized 6000.5.10f1 fallback was used. Older-editor compatibility and Mac builds remain untested.
-
-Automatic needs decay and saved progress are absent. The status bars demonstrate action feedback through built-in components. Wash reuses happy because no wash animation was supplied.
+Keyboard navigation, Android, iOS, Mac, and Unity 6000.2.2f1 are untested. Automatic needs decay and saved progress are absent. The bars are session-only action feedback. Smoothness has not been compared in a measured motion study; twelve-frame clips and visible pose changes are verified.

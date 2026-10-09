@@ -1,36 +1,36 @@
 # PocketPet Care
 
-Unity virtual-pet care demo using PocketPet's supplied pup artwork and three unchanged runtime scripts.
+A portrait virtual-pet care demo built in Unity 6000.5.10f1 with only three supplied scripts, unchanged.
 
-![PocketPet Care running on Windows](docs/img/home-1280.png)
+![Study action in the actual Windows game](docs/img/portrait-study.png)
 
-Download the [Windows game](https://github.com/Zeref538/PocketPet-Care/releases/tag/v1.0.0), extract the whole ZIP, and open PocketPet Care.exe. Unity is only needed to edit the project. This download does not run on a phone or Mac.
+Download the [Windows game](https://github.com/Zeref538/PocketPet-Care/releases/tag/v1.1.0), extract the entire ZIP, and open PocketPet Care.exe. Unity is only needed to edit the project. The portrait layout is tested on Windows; this is not an Android or iOS app.
 
-Open this repository root in Unity Hub using Unity 6000.5.10f1, then open Assets/Scenes/SampleScene.unity. The source PocketPet project remains separate.
+## Play
 
-Press Play in Unity. Feed, Love, Play, Study, Sleep, Wash, Sad, and Cry trigger the pet's existing animations. Four bars show hunger, happiness, energy, and cleanliness. Each button also calls a named sound through the supplied AudioManager.
+Eight buttons share one glossy shape, with different colors and a pup performing each action. Each action shows a short speech bubble, calls a supplied sound, and returns to idle after three seconds.
 
-The pet returns to idle after three seconds. Another action restarts that timer. Wash uses the happy animation because no washing clip was supplied. Sad and Cry are mood demonstration buttons.
-
-## Status feedback
-
-| Action | Bar | Value after pressing |
+| Button | What appears | Status feedback |
 | --- | --- | --- |
-| Feed | Hunger | 100% |
-| Love | Happiness | 100% |
-| Play | Happiness | 90% |
-| Study | Energy | 45% |
-| Sleep | Energy | 100% |
-| Wash | Cleanliness | 100% |
-| Sad | Happiness | 30% |
-| Cry | Happiness | 10% |
+| Feed | Bone biscuit and food bowl | Hunger 100% |
+| Love | Happy pup | Happiness 100% |
+| Play | Pup and red ball | Happiness 90% |
+| Study | Glasses, open book, wooden table | Energy 45% |
+| Sleep | Sleeping pup in a pink bed | Energy 100% |
+| Wash | Pup washing in a tub with bubbles | Cleanliness 100% |
+| Drink | Pup lapping from a water bowl | Energy 80% |
+| Scene | Bedroom or garden | Existing values preserved |
 
-These are fixed feedback values connected through built-in Image components. The supplied scripts do not implement automatic needs decay, sickness, death, or saved progress. Restarting resets all bars to 55%.
+Idle and the seven care states each use twelve distinct sprite frames at 12 frames per second. Scene toggles scenery without restarting the game. Speech bubbles and extra props disappear at idle.
 
-## Version and artwork
+The bars show fixed action feedback. Automatic needs decay, sickness, death, and saved progress are absent. Restarting resets bars to 55% and restores the bedroom. Sad and Cry remain unused source animation clips; they are no longer action buttons.
 
-Unity 6000.2.2f1 installation required Windows administrator approval and failed on the approved retry. This project uses the authorized 6000.5.10f1 fallback. Opening it in 6000.2.2f1 has not been tested.
+## Edit
 
-Artwork can also be downloaded separately from [PocketPet-sprites](https://github.com/Zeref538/PocketPet-sprites) for the lab's slow Wi-Fi. This Unity project contains the assets it needs to run.
+Add this repository root in Unity Hub with Unity 6000.5.10f1. Open Assets/Scenes/SampleScene.unity and choose a 9:16 aspect ratio in the Game view before pressing Play. The standalone window defaults to 405 by 720; the Canvas reference is 720 by 1280.
 
-Runtime source is limited to PetButtons.cs, AudioManager.cs, and Sound.cs. No helper or editor scripts are included. See [verification](docs/VERIFICATION.md) for measured checks and remaining platform limits.
+Unity 6000.2.2f1 installation failed on the authorized retry because Windows administrator approval was unavailable. This project uses the authorized 6000.5.10f1 fallback. Older-editor compatibility and Mac builds are untested.
+
+Artwork is available separately in [PocketPet-sprites](https://github.com/Zeref538/PocketPet-sprites). The new frame PNGs total 2,990,319 bytes, so artwork can be downloaded without Unity project files.
+
+Runtime source is limited to PetButtons.cs, AudioManager.cs, and Sound.cs. Two instances of the unchanged PetButtons drive the pet and speech-bubble timers. Built-in Animator and Button events handle props and scenery. No helper or editor scripts are included. See [verification](docs/VERIFICATION.md).
